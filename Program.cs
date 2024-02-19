@@ -12,19 +12,16 @@ class Program
 
         Console.Clear();
         Console.WriteLine("Programa Calculadora:");
-
         Console.WriteLine("-------------------------");
-
         Console.WriteLine("1 - Soma");
         Console.WriteLine("2 - Subtração");
         Console.WriteLine("3 - Multiplicação");
         Console.WriteLine("4 - Divisão");
         Console.WriteLine("5 - Exponenciação");
         Console.WriteLine("6 - Sair");
-
         Console.WriteLine("-------------------------");
-
         Console.WriteLine("Informe a operação:");
+        Console.WriteLine("-------------------------");
 
         short opcao = short.Parse(Console.ReadLine());
 
@@ -85,13 +82,17 @@ class Program
     }
     static void Divisao()
     {
-        Console.WriteLine("Informe primeiro valor:");
+        Console.WriteLine("Informe o dividendo:");
         double v1 = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Informe segundo valor:");
+        Console.WriteLine("Informe o divisor:");
         double v2 = double.Parse(Console.ReadLine());
 
-        Console.WriteLine($"{v1} dividido por {v2} é igual a {v1 / v2}.");
+        if(v2 != 0)
+            Console.WriteLine($"{v1} dividido por {v2} é igual a {v1 / v2}.");
+        else
+            Console.WriteLine("Impossível dividir por zero.");
+        
 
         Console.ReadKey();
 
